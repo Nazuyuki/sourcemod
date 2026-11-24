@@ -120,8 +120,6 @@ jobs:
         working-directory: sourcemod
         shell: bash
         env:
-          BREAKPAD_SYMBOL_SERVER: ${{ vars.BREAKPAD_SYMBOL_SERVER }}
-          BREAKPAD_SYMBOL_SERVER_TOKEN: ${{ secrets.BREAKPAD_SYMBOL_SERVER_TOKEN }}
         run: |
           mkdir build
           cd build

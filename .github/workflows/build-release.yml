@@ -135,7 +135,6 @@ jobs:
           ambuild
 
           mkdir -p package/addons/sourcemod/configs/geoip
-          cp '${{ steps.path_helper.outputs.dependencies }}/GeoLite2-City.mmdb' package/addons/sourcemod/configs/geoip/GeoLite2-City.mmdb
       
       - name: Package
         id: package

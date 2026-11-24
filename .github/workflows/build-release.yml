@@ -119,7 +119,7 @@ jobs:
       - name: Build
         working-directory: sourcemod
         shell: bash
-        env:
+        env: {}
         run: |
           mkdir build
           cd build

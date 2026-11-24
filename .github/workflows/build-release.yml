@@ -18,9 +18,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - platform: windows
-            os: windows-latest
-            os_short: win
           - platform: linux
             os: ubuntu-latest
             os_short: linux

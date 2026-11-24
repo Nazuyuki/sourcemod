@@ -118,7 +118,6 @@ jobs:
 
           if [ -z "$MAXMIND_LICENSE_KEY" ]; then
             echo "::error::MAXMIND_LICENSE_KEY secret is not configured."
-            exit 1
           fi
 
           geotmpdir=$(mktemp -d)
@@ -128,7 +127,6 @@ jobs:
           geommdb=$(find "$geotmpdir" -type f -name 'GeoLite2-City.mmdb' | head -n 1)
           if [ -z "$geommdb" ]; then
             echo "::error::GeoLite2-City.mmdb not found in downloaded MaxMind archive."
-            exit 1
           fi
           cp "$geommdb" '${{ steps.path_helper.outputs.dependencies }}/GeoLite2-City.mmdb'
           rm -rf "$geotmpdir"
